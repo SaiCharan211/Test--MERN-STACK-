@@ -11,6 +11,9 @@ app.use(cors())
 
 
 mongoose.connect("mongodb://localhost:27017/employee")
+app.get('/',(req,res)=>{
+    res.send(req.body)
+})
 
 app.post('/login',(req,res)=>{
     const {email, password}=req.body;
